@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Daily Water Cooler</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= favicon_link_tag %>
+  <script src="//load.sumome.com/" data-sumo-site-id="9b4b4b06d7c8a11e66141fa075be53836b74029203c85cfe04be05a17f0c137e" async></script>
+</head>
+<body>
+	<div id="wrap">
+		<%= render 'layouts/header' %>
+		<%-# <div class="container"> -%>
+			<%= yield %>
+		<%-# </div> -%>
+		<div id="push"></div>
+	</div>
+	<%= render 'layouts/footer' %>
+
+	<%= render 'layouts/ga' if Rails.env.production? %>
+
+</body>
+</html>

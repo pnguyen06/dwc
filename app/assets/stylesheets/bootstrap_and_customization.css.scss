@@ -1,0 +1,89 @@
+@import url('//fonts.googleapis.com/css?family=Open+Sans:400,700,300,600');
+@import url('//fonts.googleapis.com/css?family=Cabin:600');
+@import url('//fonts.googleapis.com/css?family=Raleway:900');
+
+
+$body-bg: #ffffff;
+$font-family-sans-serif: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$navbar-default-bg: #ffffff;
+$brand-primary: #e74c3c;
+
+@import 'bootstrap';
+
+.center {
+	text-align: center;
+}
+
+.cabin {
+  font-family: 'Cabin', sans-serif;
+  font-weight: 600;
+}
+
+.raleway {
+  font-family: 'Raleway';
+  font-weight: 900;
+}
+
+.navbar .nav > li > a {
+  line-height: 40px;
+}
+
+.navbar-brand {
+	font-weight: bold;
+}
+
+
+/* Sticky footer styles */
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -100px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+  height: 100px;
+}
+#footer {
+  background-color: #38301e;
+  color: #5a5a5a;
+  font-size: 10px;
+}
+
+#footer a {
+    color: #fff;
+}
+
+.btn {
+  border-radius: 50px;
+  background: none;
+  border: 1px solid;
+}
+
+.btn:hover {
+  background-color: #f1f1f1;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .navbar .nav > li > a {
+    line-height: 1.0;
+  }
+}

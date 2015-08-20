@@ -1,0 +1,49 @@
+<div class="container">
+  <button type="button" class="btn btn-default"><%= link_to 'New Referrer', new_referrer_path %></button>
+
+  <h1>Breakroom Referrers</h1>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Email</th>
+        <th>Referrals</th>
+        <th>Points</th>
+        <th>Breakroom</th>
+        <th>Last Updated</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @referrers.each do |referrer| %>
+        <tr>
+          <td><%= link_to referrer.email, referrer %></td>
+          <td><%= referrer.referrals %></td>
+          <td><%= referrer.points %></td>
+          <td>
+            <% if referrer.breakroom %>
+              <span class="fa fa-check-circle" style="color: #1abc9c;"></span>
+            <% else %>
+              <span class="fa fa-times-circle" style="color: #e74c3c;"></span>
+            <% end %>
+          </td>
+          <td><%= referrer.updated_at.strftime("%m/%d/%y") %></td>
+          <td>
+            <%= link_to edit_referrer_path(referrer) do %>
+              <span class="fa fa-edit"></span>
+              Edit
+            <% end %>
+          </td>
+          <td>
+            <%= link_to referrer, method: :delete, data: { confirm: 'Are you sure?' } do %>
+              <span class="fa fa-trash-o"></span>
+              Delete
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

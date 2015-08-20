@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  referrals: 1
+  breakroom: false
+
+two:
+  email: MyString
+  referrals: 1
+  breakroom: false

@@ -1,0 +1,20 @@
+<div align="center">
+  <div class="container">
+    <h3>Share The DWC with a friend</h3>
+
+    <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+      <%= f.input :name, label: 'What your name?', :required => true %>
+      <%= f.input :to_email, label: 'Enter in a single email', :required => true %>
+      <% ref_email = "I signed up for the best morning newsletter and want you to sign up too. Free delicious news delivered to you daily. Sign up with this link to get started: "+ref_url %>
+      <%= f.input :message, :as => :text, :required => true , :input_html => { :rows => 6, value: ref_email } %>
+      <div class= "hidden">
+        <%= f.input :from_email, label: 'What is your email?', :required => true, :input_html => { value: params[:search] } %>
+        <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+      </div>
+      <div>
+        </br>
+        <%= f.button :submit, 'REFER FRIENDS', :class=> "btn btn-default" %>
+      </div>
+    <% end %>
+  </div>
+</div>

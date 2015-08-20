@@ -1,0 +1,114 @@
+<div class="jumbotron shop_jumbo">
+	<div class="container">
+		<h2>This is our shop</h2>
+		<h4>
+			Feel free to browse
+		</h4>
+	</div>
+</div>
+<div class="container" style="text-align: center;">
+	<h4 style="line-height: 1.4">
+		We carefully choose neat products that we ourselves would use and
+		<br />
+		create limited batches to offer our readers, one crafted item at a time.
+	</h4>	
+</div>
+<div class="container" style="margin-top: 40px;">
+	<!-- T-SHIRT -->
+	<!--<div class="row" style="margin-bottom: 30px;">
+		<div class="col-md-4 col-md-push-4">
+			<%= image_tag "shop/x_crystalimagery.jpg", :class => "img-responsive", :style => "margin: 0 auto;" %>
+		</div>
+		<div class="col-md-4 col-md-push-4">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	  		<ol class="carousel-indicators">
+			    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			  </ol>
+
+			  <div class="carousel-inner">
+			    <div class="item active">
+			      <%= image_tag "shop/x_crystalimagery.jpg", :style => "margin: 0 auto;" %>
+			    </div>
+			    <div class="item">
+			      <%= image_tag "shop/x_crystalimagery.jpg", :style => "margin: 0 auto;"  %>
+			    </div>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-4 col-md-pull-8">
+			<div>Tee Shirt</div>
+			<br />
+			<div style="color: #8f8f8f;">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+			<hr width="50%">
+			<div>
+				$57
+			</div>
+		</div>
+	</div>-->
+	<!-- ROCKS GLASS -->
+	<div class="row" style="margin-bottom: 30px;">
+		<div class="col-md-4" style="margin-top: 15px;">
+			<%= image_tag "shop/wg_1.jpg", :size => "350x400", :class => "img-responsive", :style => "margin: 0 auto;" %>
+		</div>	
+		<div class="col-md-4" style="margin-top: 15px;">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	  		<!-- Indicators -->
+	  		<ol class="carousel-indicators">
+			    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+			  </ol>
+
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner">
+			    <div class="item active">
+			      <%= image_tag "shop/wg_2.jpg", :size => "350x400", :class => "img-responsive", :style => "margin: 0 auto;" %>
+			    </div>
+			    <div class="item">
+			      <%= image_tag "shop/wg_3.jpg", :size => "350x400", :class => "img-responsive", :style => "margin: 0 auto;"  %>
+			    </div>
+			    <div class="item">
+			      <%= image_tag "shop/wg_4.jpg", :size => "350x400", :class => "img-responsive", :style => "margin: 0 auto;"  %>
+			    </div>
+			    <div class="item">
+			      <%= image_tag "shop/wg_5.jpg", :size => "350x400", :class => "img-responsive", :style => "margin: 0 auto;"  %>
+			    </div>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-4" style="margin-top: 15px;">
+			<div>Old Fashioned Glass</div>
+			<br />
+			<div style="color: #8f8f8f;">
+				<i>Keeping up with the news should be easy.
+				<br/> 
+				Your drinks should be hard.</i>
+				<br /><br />
+				We're proud to offer a limited supply of old fashioned glasses, handcrafted through a sand-carving method that leaves the logo raised from the glass. These 13.5 oz. glasses are perfect for sipping on your favorite tasty beverage while catching up on the news.
+			</div>
+			<hr width="50%">
+			<div>
+				<%= form_tag charges_path do %>
+				  <article>
+				    <label class="amount">
+				      <span style="font-weight: normal;">$25 <small><i style="color: #8f8f8f;">(plus $7 S&H)</i></small></span>
+				    </label>
+				  </article>
+
+  				<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="Old Fashioned Glass"
+          data-amount="3200"
+          data-label="Buy with Stripe"
+          data-allow-remember-me="false"
+          data-billingAddress="true"
+          data-shippingAddress="true"></script>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>

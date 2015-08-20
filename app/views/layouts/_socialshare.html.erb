@@ -1,0 +1,58 @@
+<% ref_url = "http://the-dwc.co/?ref=" + @info.fetch("data")[0].fetch("id") %>
+<div class="input-group">
+  <div class="input-group-addon">
+    <span class="fa fa-link"></span> <small>Share Link</small>
+  </div>
+  <input type="text" class="form-control" value=<%= ref_url %> >
+</div>
+<div>
+  <table class="table borderless">
+    <tbody>
+      <tr>
+        <td>
+          <a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-envelope"></i> <small>Email</small></a>
+        </td>
+        <td>
+          <% ref_facebook = "https://www.facebook.com/sharer/sharer.php?u=" + ref_url %>
+          <a class="btn btn-default" href=<%= ref_facebook %> target="_blank"><i class="fa fa-facebook"></i> <small>Share</small></a>
+        </td>
+        <td>
+          <% ref_twitter = "https://twitter.com/intent/tweet?text=Do+you+read+%40the_dwc%3F+Get+a+morning+email+jam-packed+with+news+and+humor+to+make+sure+you're+never+left+behind%3A&url=http%3A%2F%2Fthe-dwc.co%2F%3Fref%3D"+@info.fetch("data")[0].fetch("id") %>
+          <% ref_twttr_pop = "window.open('print.html', 'newwindow', 'width=300, height=250'); return false;" %>
+          <a class="btn btn-default" href=<%= ref_twitter %> target="_blank" ><i class="fa fa-twitter"></i> <small>Tweet</small></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- MODAL -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title cabin" id="myModalLabel">EMAIL A FRIEND</h4>
+      </div>
+      <div class="modal-body">
+        <div align="center">
+          <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+            <%= f.input :name, label: 'What your name?', :required => true %>
+            <%= f.input :to_email, label: 'Enter in a single email', :required => true %>
+            <% ref_email = "I signed up for the best morning newsletter and want you to sign up too. Free delicious news delivered to you daily. Sign up with this link to get started: "+ref_url %>
+            <%= f.input :message, :as => :text, :required => true , :input_html => { :rows => 6, value: ref_email } %>
+            <div class= "hidden">
+              <%= f.input :from_email, label: 'What is your email?', :required => true, :input_html => { value: params[:search] } %>
+              <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+            </div>
+            <div>
+              </br>
+              <%= f.button :submit, 'REFER FRIENDS', :class=> "btn btn-default" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END MODAL -->

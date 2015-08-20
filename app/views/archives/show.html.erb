@@ -1,0 +1,17 @@
+<div class="container" style="background-color: #fff;">
+	<p id="notice"><%= notice %></p>
+	<div class="row" style="margin-bottom: 15px;">
+	<div class="col-md-8 col-md-offset-2">
+		<% if user_signed_in? %>
+    	<%= link_to 'Edit', edit_archive_path(@archive) %> |
+    	<%= link_to 'Back', archives_path %>
+    	<br />
+  	<% end %>
+		<small class="cabin"><%= @archive.date.strftime("%A %B %e, %Y").upcase %></small>
+		<h2 class="cabin" style="text-align: left;"><%= @archive.title.upcase %></h2>
+		<br />
+		<%= @archive.code.html_safe %>
+	</div>
+</div>
+
+</div>

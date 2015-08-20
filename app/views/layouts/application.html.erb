@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Daily Water Cooler</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= favicon_link_tag %>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="//load.sumome.com/" data-sumo-site-id="9b4b4b06d7c8a11e66141fa075be53836b74029203c85cfe04be05a17f0c137e" async></script>
+  <link href='//fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+  <meta property="og:site_name" content="The Daily Water Cooler" />
+  <meta property="og:title" content="The Daily Water Cooler" />
+  <meta property="og:url" content="https://www.the-dwc.co" />
+  <meta property="og:image" content="https://www.the-dwc.co/assets/fb_thumbnail-f00749d31f80de40f37ad878b8258750.jpg"/>
+  <meta property="og:description" content="The Daily Water Cooler is a curated email newsletter delivered every weekday morning designed to inform and delight. Takes only a moment each day to make sure you don't miss out on what people are talking about. Subscribe today." />
+  <meta name="google-site-verification" content="oGn032rdRZoBzlWd9cCihuKa6xMf2yFXY2gOxsNRK4o" />
+</head>
+<body>
+	<div id="wrap">
+		<%= render 'layouts/header' %>
+		<%-# <div class="container"> -%>
+			<%= yield %>
+		<%-# </div> -%>
+		<div id="push"></div>
+	</div>
+	<%= render 'layouts/footer' %>
+
+	<%= render 'layouts/ga' if Rails.env.production? %>
+
+</body>
+</html>

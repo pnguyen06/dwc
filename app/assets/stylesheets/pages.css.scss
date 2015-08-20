@@ -1,0 +1,254 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+a:hover {
+	text-decoration: none;
+}
+
+.jumbotron {
+	position: relative;
+	background: #7e99bf;
+	width: 100%;
+	height: 100%;
+	//min-height: 650px;
+	background-size: cover;
+	overflow: hidden;
+}
+
+.header_nav {
+	letter-spacing: 2px; 
+	text-align: right;
+	font-family: 'Cabin', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.header_nav a {
+	color: #fff;
+}
+
+
+
+.main_jumbo {
+	background: url('banner.jpg') center;
+	height: 500px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  margin-top: -20px;
+}
+.main_jumbo_text {
+	h3 {
+		line-height: 40px;
+	}
+}
+#testimonials li {
+	display: none;
+}
+#testimonials ul {
+	list-style: none;
+}
+blockquote {
+	background: url('quote.png') 0 0 no-repeat;
+	padding: 10px 0 10px 50px;
+	border-left: none;
+}
+.mailchimp_signup {
+	margin-left: 200px;
+	margin-right: 200px;
+}
+
+
+.footer_social {
+	text-align: right;
+}
+
+
+.jumbo_copy {
+	font-size: 50px;
+	letter-spacing: 2px;
+}
+
+.about_jumbo {
+	background: url('about_banner.jpg') center;
+	height: 400px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  margin-top: -20px;
+}
+.about_story a {
+	color: #8197b3;
+}
+.about_name {
+	h4 {
+		font-weight: bold;
+	}
+}
+.about_twitter {
+}
+.about_twitter a {
+	color: #8197b3;
+}
+#team {
+	margin: 0 auto;
+}
+.box-team {
+	margin-left: 35px;
+	margin-right: 35px;
+	margin-bottom: 30px;
+	width: 225px;
+	height: 300px;
+}
+.box-team img {
+	width: 100%;
+}
+
+
+.recent_jumbo {
+	background: url('archive_banner.jpg') center;
+	height: 400px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  margin-top: -20px;
+}
+#archive {
+	margin: 0 auto;
+}
+.box-archive {
+	margin: 5px;
+	width: 200px;
+	height: 200px;
+}
+.box-archive img {
+	width: 100%;
+}
+.box-archive img:hover {
+	opacity: 0.4;
+	filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+
+
+.ambassador_jumbo {
+	background: url('ambassador_banner.jpg') center;
+	height: 400px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  margin-top: -20px;
+}
+.ambassador_bullets a {
+	color: #8197b3;
+}
+.ambassador_signup {
+	background-color: #5a5a5a;
+	color: #fff;
+}
+.ambassador_signup a {
+	color: #bebebe;
+}
+.ambassador_note {
+	border-style: solid;
+	border-width: 1px;
+	color: #5a5a5a;
+}
+
+
+.breakroom_jumbo {
+	background: url('breakroom_banner.jpg') center;
+	height: 400px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  margin-top: -20px;
+}
+.breakroom_lookup a {
+	color: #bebebe;
+}
+
+
+.thankyou_jumbo {
+	background: url('thankyou_banner.jpg') center;
+	height: 400px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  margin-top: -20px;
+}
+.thanks_link a {
+	color: #8197b3;
+}
+
+
+.shop_jumbo {
+	background: url('shop_banner.jpg') center;
+	height: 250px;
+  color: #fff;
+  text-align: right;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  margin-top: -20px;
+}
+
+.borderless tbody tr td, .borderless tbody tr th, .borderless thead tr th {
+    border: none;
+}
+
+
+.main_hero_text {
+	line-height: 1.1;
+}
+
+
+@media (max-width: 767px) {
+	.main_hero_text {
+		font-size: 24px;
+	}
+
+
+
+
+
+
+
+	.main_jumbo_text {
+		h3 {
+			font-size: 18px;
+			line-height: 30px;
+		}
+	}
+	.mailchimp_signup {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	.jumbo_copy {
+		font-size: 32px;
+	}
+	.footer_nav {
+		text-align: center;
+	}
+	.footer_social {
+		text-align: center;
+		margin-top: 25px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.main_hero_text {
+		font-size: 50px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.main_hero_text {
+		font-size: 60px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.main_hero_text {
+		font-size: 70px;
+	}
+}

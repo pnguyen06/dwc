@@ -1,0 +1,77 @@
+<div class="jumbotron breakroom_jumbo">
+	<div class="container">
+    <p class="cabin jumbo_copy">HELP GROW THIS THING</p>
+    <h4 style="line-height: 2.0;">
+      I mean, even Flappy Bird had over 50 million downloads
+    </h4>
+  </div>
+</div>
+<div class="container breakroom_lookup center" style="margin-top: 30px;">
+  <% @referrers.each do |referrer| %>
+    <% if referrer.email == "none" %>
+      <hr style="width: 50%">
+      <h2 class="cabin" style="letter-spacing: 2px;">
+        REFERRAL PROGRAM
+      </h2>
+      <hr style="width: 50%;">
+      <h4 style="line-height: 2.0">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            Refer your friends to The DWC and receive points that you can exchange for rewards.
+          </div>
+        </div>
+      </h4> 
+      <h4 style="line-height: 2.0; margin-top: 30px;">
+        Enter in your email below to check how many referrals you have <small><i>(updated daily-ish)</i></small>.
+      </h4>
+      <form action="<%= invite_path %>" method="get">
+        <p style="margin-top: 15px;">
+          <%= text_field_tag :search, params[:search], :style => "border: 1px solid;" %>
+          <%= submit_tag "Search", :name => nil, :class => "btn" %>
+        </p>
+      </form>
+    <% else %>
+      <div class="row">
+        <div class="col-md-6">
+          <% if referrer.referrals == 0 %>
+            Sorry, this email has no referrals.
+          <% else %>
+            <div class="row">
+              <div class="col-md-4">
+                <h1><%= referrer.referrals %></h1>
+                FRIENDS REFERRED
+              </div>
+              <div class="col-md-4">
+                <h1><%= referrer.points %></h1>
+                POINTS
+              </div>
+              <div class="col-md-4">
+                
+              </div>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-6">
+          <%= render 'layouts/socialshare' %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+
+  <!-- NOT SUBSCRIBED -->
+  <% if @referrers.empty? %>
+    <% if @info.fetch("error_count")[0] == 0 %>
+      <div class="row">
+        <div class="col-md-6">
+          Sorry, this email has no referrals.
+        </div>
+        <div class="col-md-6">
+          <%= render 'layouts/socialshare' %>
+        </div>
+      </div>
+    <% end %>
+    <% if @info.fetch("error_count")[0] > 0 %>
+      This email is not subscribed to The DWC.
+    <% end %>
+  <% end %>
+</div>

@@ -1,0 +1,34 @@
+<div class="container">
+	<p id="notice"><%= notice %></p>
+
+	<p>
+	  <strong>Email:</strong>
+	  <%= @referrer.email %>
+	</p>
+
+	<p>
+	  <strong>Referrals:</strong>
+	  <%= @referrer.referrals %>
+	</p>
+
+	<p>
+	  <strong>Points:</strong>
+	  <%= @referrer.points %>
+	</p>
+
+	<p>
+	  <strong>Breakroom:</strong>
+	  <% if @referrer.breakroom %>
+      <span class="fa fa-check-circle" style="color: #1abc9c;"></span>
+    <% else %>
+      <span class="fa fa-times-circle" style="color: #e74c3c;"></span>
+    <% end %>
+	</p>
+
+	<%= link_to edit_referrer_path(@referrer) do %>
+    <span class="fa fa-edit"></span>
+    Edit
+  <% end %>
+  |
+  <%= link_to "Index", referrers_path %>
+</div>

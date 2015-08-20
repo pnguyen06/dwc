@@ -1,0 +1,39 @@
+		___            _      
+		 |  |_   _    | \  _  o | \/
+		 |  | | (/_   |_/ (_\ | | /
+        	                 __
+  	 \    /  _ _|_  _   _   /    _  _ | _   _
+   	  \/\/  (_\ |  (/_ |    \__ (_)(_)|(/_ |
+
+        	MADE IN NYC. FOUNDED IN 2013.
+
+
+This creation.txt file explains the team and graphic assets behind this site.
+
+
+PEOPLE
+_____________________________________________________________________________
+
+This site was hand-crafted by Water Cooler Labs.
+http://www.watercoolerlabs.com
+
+Phil Nguyen
+Design, content, strategy
+
+
+
+
+GRAPHIC ASSETS
+_____________________________________________________________________________
+
+The Noun Project (icons)
+http://thenounproject.com/term/brain/4059/ Designed by hunotika
+
+Death to Stock Photo (photo)
+http://deathtothestockphoto.com/
+
+Open Sans (font)
+http://www.google.com/fonts/specimen/Open+Sans
+
+Cabin (font)
+http://www.google.com/fonts/specimen/Cabin
