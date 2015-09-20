@@ -1,0 +1,66 @@
+<div class="jumbotron" style="background: #7e99bf;">
+	<div class="container">
+		<table width="100%">
+			<tr>
+				<td style="text-align: left;">
+					<%= link_to (image_tag "logo2.png", :size => "40x40", :title => "The Daily Water Cooler"), root_path %>
+				</td>
+				<td class="header_nav">
+					<%= link_to "About", about_path %>
+					&nbsp; | &nbsp;
+	      	<%= link_to "Invite a friend", invite_path %>
+	      </td>
+			</tr>
+		</table>
+		<div style="margin-top: 25px; text-align: left;">
+			<div class="row raleway main_hero_text">
+				<div class="col-md-12">
+					<span style="color: #ffccbc;">Meet <%= link_to "Phil", "http://www.twitter.com/p_ngu", :style => "color: #ffccbc; text-decoration: underline;" %>.</span>
+					<br />
+					<span style="color: #34495e;">He f*cking loves the news.</span>
+				</div>
+			</div>
+		</div>
+		<div style="color: #fff; margin-top: 20px; line-height: 1.1;">
+			The DWC's mission is to keep readers informed, with minimal time commitment, about relevant news and to elevate conversation in any social situation.
+		</div>
+	</div>
+</div>
+<div style="width: 100%;">
+	<%= link_to "https://www.facebook.com/thedailywatercooler" do %>
+		<div class="column" style="background-color: #D1C4E9;">
+			<div class="row" style="margin-top: 50px;">
+				<div class="col-md-2 col-md-offset-2 center">
+					<i class="fa fa-facebook fa-4x" style="color: #34495e;"></i>
+				</div>
+				<div class="col-md-6 social_nav" style="color: #fff;">
+					Awkwardly poke us on Facebook.
+				</div>
+			</div>
+		</div>
+	<% end %>
+	<%= link_to "https://twitter.com/the_dwc" do %>
+		<div class="column" style="background-color: #e57373;">
+			<div class="row" style="margin-top: 50px;">
+				<div class="col-md-2 col-md-offset-2 center">
+					<i class="fa fa-twitter fa-4x" style="color: #34495e;"></i>
+				</div>
+				<div class="col-md-6 social_nav" style="color: #fff;">
+					Retweet all of our witty insights on Twitter.
+				</div>
+			</div>
+		</div>
+	<% end %>
+	<%= link_to "https://instagram.com/the_dwc" do %>
+		<div class="column" style="background-color: #D7CCC8;">
+			<div class="row" style="margin-top: 50px;">
+				<div class="col-md-2 col-md-offset-2 center">
+					<i class="fa fa-instagram fa-4x" style="color: #34495e;"></i>
+				</div>
+				<div class="col-md-6 social_nav" style="color: #fff;">
+					Like our vain selfies on Instagram.
+				</div>
+			</div>
+		</div>
+	<% end %>
+</div>

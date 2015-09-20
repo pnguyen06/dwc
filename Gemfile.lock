@@ -201,7 +201,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise (~> 3.4.0)
   figaro (~> 1.1.0)
-  font-awesome-rails (~> 4.0.3.1)
+  font-awesome-rails
   gibbon
   jbuilder (~> 1.2)
   jquery-rails

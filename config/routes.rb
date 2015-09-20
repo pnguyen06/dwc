@@ -6,6 +6,7 @@ Dwc::Application.routes.draw do
 
   root "pages#home"
   get "homeV2" => "pages#homeV2"
+  get "aboutV2" => "pages#aboutV2"
   get "about" => "pages#about"
   get "recent" => "pages#recent"
   get "ambassador" => "pages#ambassador"

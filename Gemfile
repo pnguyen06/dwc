@@ -11,7 +11,7 @@ gem 'turbolinks' # Turbolinks makes following links in your web application fast
 gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 1.2' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'bootstrap-sass', '~> 3.0.3.0'
-gem 'font-awesome-rails', '~> 4.0.3.1'
+gem 'font-awesome-rails'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'devise', '~> 3.4.0'
 gem 'masonry-rails', '~> 0.2.1'

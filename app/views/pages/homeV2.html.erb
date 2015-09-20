@@ -1,21 +1,23 @@
-<div class="jumbotron">
+<div class="jumbotron" style="background: #ffccbc;">
 	<div class="container">
 		<table width="100%">
 			<tr>
 				<td style="text-align: left;">
-					<%= link_to (image_tag "logo.png", :size => "40x40", :title => "The Daily Water Cooler"), root_path %>
+					<%= link_to (image_tag "logo2.png", :size => "40x40", :title => "The Daily Water Cooler"), root_path %>
 				</td>
 				<td class="header_nav">
-	      	<%= link_to "INVITE A FRIEND", invite_path %>
+					<%= link_to "About", about_path %>
+					&nbsp; | &nbsp;
+	      	<%= link_to "Invite a friend", invite_path %>
 	      </td>
-		</tr>
+			</tr>
 		</table>
 		<div style="margin-top: 25px; text-align: left;">
 			<div class="row raleway main_hero_text">
-				<div class="col-md-9">
-					<span style="color: #FFF;">Don't get left behind.</span>
+				<div class="col-md-12">
+					<span style="color: #e57373;">Morning news made better.</span>
 					<br />
-					<span style="color: #34495e;">The DWC is a better way to get your news.</span>
+					<span style="color: #34495e;">The DWC is a free and delightful daily email newsletter.</span>
 				</div>
 			</div>
 
@@ -23,38 +25,42 @@
 			<div id="mc_embed_signup" class="mailchimp_signup" style="width: 100%; margin: 0 auto; margin-top: 25px;">
 				<form action="//the-dwc.us5.list-manage.com/subscribe/post?u=c94281593a87a67bc1c5fe199&amp;id=a44f77cc62" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
 	    		<div id="mc_embed_signup_scroll">
-		
-						<div class="mc-field-group">
-							<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="What's your email?" style="text-align:left;" autofocus>
-						</div>
-						<div class="mc-field-group" style="position: absolute; left:-5000px; display:none;">
-							<input type="text" value="<%= @ref %>" name="REFERRAL" class="" id="mce-REFERRAL" style="text-align:left;">
-						</div>
-						<div id="mce-responses" class="clear">
-							<div class="response" id="mce-error-response" style="none"></div>
-							<!--<div class="response" id="mce-success-response" style="display:none"></div>-->
-						</div>    
-						<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-	    			<div style="position: absolute; left: -5000px;">
-	    				<input type="text" name="b_c94281593a87a67bc1c5fe199_a44f77cc62" tabindex="-1" value="">
-	    			</div>
-	    			<div class="clear">
-	    				<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="border-radius: 50px; font-size: 20px; letter-spacing: 2px;">
-	    				<br />
-	    			</div>
+						<div class="row">
+							<div class="col-md-10">
+									<div class="mc-field-group">
+										<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="What's your email?" style="text-align:left; color: #34495e;" autofocus>
+										<div class="past_newsletters" style="font-size: 12px;">
+											<%= link_to "View past newsletters", recent_path, :style => "color: #34495e;" %>
+										</div>
+									</div>
+									<div class="mc-field-group" style="position: absolute; left:-5000px; display:none;">
+										<input type="text" value="<%= @ref %>" name="REFERRAL" class="" id="mce-REFERRAL" style="text-align:left;">
+									</div>
+									<div id="mce-responses" class="clear">
+										<div class="response" id="mce-error-response" style="none"></div>
+										<!--<div class="response" id="mce-success-response" style="display:none"></div>-->
+									</div>    
+									<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+				    			<div style="position: absolute; left: -5000px;">
+				    				<input type="text" name="b_c94281593a87a67bc1c5fe199_a44f77cc62" tabindex="-1" value="">
+				    			</div>
+				    	</div>
+				    	<div class="col-md-2">
+				    			<div class="clear">
+				    				<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button submit_button" style="border-radius: 50px; font-size: 20px; letter-spacing: 2px;">
+				    				<br />
+				    			</div>
+				    	</div>
+				    </div>
 	    		</div>
 				</form>
 			</div>
 			<!--End mc_embed_signup-->
 		</div>
-		<div style="font-size: 12px;">
-			View past newsletters
-		</div>
-		<div class="center">
-			<p><small><%= link_to "Learn more", "#intro", :style => "color: #fff;" %></small></p>
-	    <%= link_to "#intro", :style => "color: #fff;" do %>
-	      <span class="fa fa-chevron-circle-down" style="font-size: 2em;"></span>
-	    <% end %>
+		<!-- Testimonials -->
+		<div class="center" style="font-size: 12px; color: #e57373;">
+			Selected as a top curated email newsletter by
+			<%= image_tag "featured.png", class: "img-responsive", :style => "margin: 0 auto;" %>
 		</div>
 	</div>	
 </div>
