@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   private
 	  def expire_hsts
-	    response.headers["Strict-Transport-Security"] = 'max-age=0'
+	    response.headers["Strict-Transport-Security"] = 'max-age=0; includeSubDomains'
 	  end
 	end
 
