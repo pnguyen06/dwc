@@ -1,4 +1,4 @@
-<% ref_url = "http://the-dwc.co/?ref=" + @info.fetch("data")[0].fetch("id") %>
+<% ref_url = "http://dailywatercooler.com/?ref=" + @info.fetch("data")[0].fetch("id") %>
 <div class="input-group">
   <div class="input-group-addon">
     <span class="fa fa-link"></span> <small>Share Link</small>
@@ -17,7 +17,7 @@
           <a class="btn btn-default" href=<%= ref_facebook %> target="_blank"><i class="fa fa-facebook"></i> <small>Share</small></a>
         </td>
         <td>
-          <% ref_twitter = "https://twitter.com/intent/tweet?text=Do+you+read+%40the_dwc%3F+Get+a+morning+email+jam-packed+with+news+and+humor+to+make+sure+you're+never+left+behind%3A&url=http%3A%2F%2Fthe-dwc.co%2F%3Fref%3D"+@info.fetch("data")[0].fetch("id") %>
+          <% ref_twitter = "https://twitter.com/intent/tweet?text=Do+you+read+%40the_dwc%3F+Get+a+morning+email+jam-packed+with+news+and+humor+to+make+sure+you're+never+left+behind%3A&url=http%3A%2F%2Fdailywatercooler.com%2F%3Fref%3D"+@info.fetch("data")[0].fetch("id") %>
           <% ref_twttr_pop = "window.open('print.html', 'newwindow', 'width=300, height=250'); return false;" %>
           <a class="btn btn-default" href=<%= ref_twitter %> target="_blank" ><i class="fa fa-twitter"></i> <small>Tweet</small></a>
         </td>
