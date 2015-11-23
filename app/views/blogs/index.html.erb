@@ -1,0 +1,17 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <% @blogs.each do |blog| %>
+    <%= blog.date.strftime("%B %e, %Y")  %>     
+    <h1><%= link_to blog.title, blog, {:class => "raleway"} %></h1>
+    <h4><%= blog.subtitle %></h4>
+    <!--<td><%= link_to 'Show', blog %></td>
+    <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+    <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+        
+  <% end %>
+
+  <br>
+
+  <%= link_to 'New Blog', new_blog_path %>
+</div>

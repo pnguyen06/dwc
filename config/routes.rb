@@ -1,4 +1,5 @@
 Dwc::Application.routes.draw do
+  resources :blogs
   resources :archives
 
   devise_for :users

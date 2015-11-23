@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150503142105) do
+ActiveRecord::Schema.define(version: 20151122214733) do
 
   create_table "archives", force: :cascade do |t|
     t.date     "date"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 20150503142105) do
     t.text     "code"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "blogs", force: :cascade do |t|
+    t.string   "title"
+    t.string   "subtitle"
+    t.text     "content"
+    t.date     "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "referrers", force: :cascade do |t|
