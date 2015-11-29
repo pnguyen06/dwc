@@ -1,29 +1,13 @@
-<%= form_for(@archive) do |f| %>
-  <% if @archive.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@archive.errors.count, "error") %> prohibited this archive from being saved:</h2>
+<%= simple_form_for(@archive) do |f| %>
+  <%= f.error_notification %>
 
-      <ul>
-      <% @archive.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <div class="form-inputs">
+    <%= f.input :date %>
+    <%= f.input :title %>
+    <%= f.input :code %>
+  </div>
 
-  <div class="form-group">
-    <%= f.label :date %><br>
-    <%= f.date_select :date, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :title %><br>
-    <%= f.text_field :title, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :code %><br>
-    <%= f.text_area :code, class: "form-control" %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+    <%= f.button :submit %>
   </div>
 <% end %>
