@@ -1,6 +1,11 @@
 <div class="container">
-  <% if user_signed_in? %>
-    <button type="button" class="btn btn-default"><%= link_to 'New Archive', new_archive_path %></button>
+ <% if user_signed_in? %>
+    <div class="admin-control">
+      <%= link_to new_archive_path, class: "fa-stack fa-lg" do %>
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
+      <% end %>
+    </div>
   <% end %>
   <h1>Archives</h1>
   <table class="table table-striped">

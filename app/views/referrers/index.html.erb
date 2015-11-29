@@ -1,6 +1,12 @@
 <div class="container">
-  <button type="button" class="btn btn-default"><%= link_to 'New Referrer', new_referrer_path %></button>
-
+  <% if user_signed_in? %>
+    <div class="admin-control">
+      <%= link_to new_referrer_path, class: "fa-stack fa-lg" do %>
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
+      <% end %>
+    </div>
+  <% end %>
   <h1>Breakroom Referrers</h1>
 
   <table class="table table-striped">

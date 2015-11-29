@@ -1,17 +1,20 @@
 <div class="container">
-  <p id="notice"><%= notice %></p>
-
-  <% @blogs.each do |blog| %>
-    <%= blog.date.strftime("%B %e, %Y")  %>     
-    <h1><%= link_to blog.title, blog, {:class => "raleway"} %></h1>
-    <h4><%= blog.subtitle %></h4>
-    <!--<td><%= link_to 'Show', blog %></td>
-    <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-    <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
-        
+  <% if user_signed_in? %>
+    <div class="admin-control">
+      <%= link_to new_blog_path, class: "fa-stack fa-lg" do %>
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
+      <% end %>
+    </div>
   <% end %>
-
-  <br>
-
-  <%= link_to 'New Blog', new_blog_path %>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <% @blogs.each do |blog| %>
+        <%= blog.date.strftime("%B %e, %Y")  %>     
+        <h1><%= link_to blog.title, blog, {:class => "raleway"} %></h1>
+        <h4><%= blog.subtitle %></h4>
+        <hr />
+      <% end %>
+    </div>
+  </div>
 </div>
