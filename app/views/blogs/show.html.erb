@@ -21,7 +21,7 @@
 			<h1 class="raleway"><%= @blog.title %></h1>
 			<h3><%= @blog.subtitle %></h3>
 			<p style="margin-top: 60px; font-size: 18px; line-height: 2;">
-				<%= @blog.content %>
+				<%= @blog.content.html_safe %>
 			</p>
 		</div>
 	</div>
