@@ -1,5 +1,10 @@
 Dwc::Application.routes.draw do
-  resources :blogs
+  resources :blogs do
+    member do
+      put "addcool", to: "blogs#addcool"
+    end
+  end
+
   resources :archives
 
   devise_for :users

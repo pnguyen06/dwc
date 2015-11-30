@@ -47,6 +47,13 @@ class BlogsController < ApplicationController
     redirect_to blogs_url
   end
 
+  def addcool
+    @blog = Blog.find(params[:id])
+    @blog.cool += 1
+    @blog.save!
+    redirect_to request.referrer
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_blog
@@ -55,6 +62,6 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :subtitle, :content, :date)
+      params.require(:blog).permit(:title, :subtitle, :content, :date, :upvote)
     end
 end
