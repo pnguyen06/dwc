@@ -1,4 +1,4 @@
-<div class="container" style="margin-bottom: 30px;">
+<div class="container" style="position: relative; margin-bottom: 30px;">
 	<p id="notice"><%= notice %></p>
 
 	<% if user_signed_in? %>
@@ -17,23 +17,22 @@
 			<% end %>
 			<br /><br />
 
-			<div class="row">
-				<div class="col-md-8">
-					<%= @blog.date.strftime("%B %e, %Y") %>
-					<h1 class="raleway"><%= @blog.title %></h1>
-					<h3><%= @blog.subtitle %></h3>
-				</div>
-				<div class="col-md-4">
-					<%= link_to addcool_blog_path(@blog), method: :put do %>
-            <span class="fa fa-chevron-circle-up"></span>
-            <br />
-            <%= @blog.cool %>
-            <% end %>
-				</div>
-			</div>
+			<%= @blog.date.strftime("%B %e, %Y") %>
+			<h1 class="raleway"><%= @blog.title %></h1>
+			<h3><%= @blog.subtitle %></h3>
+
+
 			<p style="margin-top: 60px; font-size: 18px; line-height: 2;">
 				<%= @blog.content.html_safe %>
 			</p>
+			<hr />
+			<div class="center">
+			  <%= link_to addcool_blog_path(@blog), method: :put do %>
+			    <span class="fa fa-bullseye fa-3x"></span>
+			    <br />
+			    <b><%= @blog.cool %> COOLS</b>
+			  <% end %>
+			</div>
 		</div>
 	</div>
 

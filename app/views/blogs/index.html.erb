@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="position: relative;">
   <% if user_signed_in? %>
     <div class="admin-control">
       <%= link_to new_blog_path, class: "fa-stack fa-lg" do %>
@@ -10,9 +10,22 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <% @blogs.each do |blog| %>
-        <%= blog.date.strftime("%B %e, %Y")  %>     
-        <h1><%= link_to blog.title, blog, {:class => "raleway"} %></h1>
-        <h4><%= blog.subtitle %></h4>
+        <div class="row">
+          <div class="col-md-10">    
+            <%= blog.date.strftime("%B %e, %Y")  %> 
+            <h1><%= link_to blog.title, blog, {:class => "raleway"} %></h1>
+            <h4><%= blog.subtitle %></h4>
+          </div>
+          <div class="col-md-2">
+            <div class="center">
+              <%= link_to addcool_blog_path(blog), method: :put do %>
+                <span class="fa fa-bullseye fa-2x"></span>
+                <br />
+                <b><%= blog.cool %> COOLS</b>
+              <% end %>
+            </div>
+          </div>
+        </div>
         <hr />
       <% end %>
     </div>
