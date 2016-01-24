@@ -5,7 +5,7 @@ class ArchivesController < ApplicationController
   # GET /archives
   # GET /archives.json
   def index
-    @archives = Archive.all
+    @archives = Archive.all.order("created_at DESC")
   end
 
   # GET /archives/1
