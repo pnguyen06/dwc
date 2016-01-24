@@ -37,6 +37,17 @@ a:hover {
 }
 
 
+// Good
+.footer_nav {
+	font-size: 14px;
+	line-height: 2.5;
+	letter-spacing: 2px;
+}
+
+
+
+
+
 .main_jumbo2 {
 	margin-top: -20px;
 }
@@ -71,9 +82,6 @@ blockquote {
 }
 
 
-.footer_social {
-	text-align: right;
-}
 
 
 .jumbo_copy {
@@ -250,13 +258,6 @@ blockquote {
 	}
 	.jumbo_copy {
 		font-size: 32px;
-	}
-	.footer_nav {
-		text-align: center;
-	}
-	.footer_social {
-		text-align: center;
-		margin-top: 25px;
 	}
 }
 
