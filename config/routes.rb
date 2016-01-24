@@ -11,16 +11,13 @@ Dwc::Application.routes.draw do
   resources :referrers
 
   root "pages#home"
-  get "homeV2" => "pages#homeV2"
-  get "aboutV2" => "pages#aboutV2"
   get "about" => "pages#about"
   get "recent" => "pages#recent"
-  get "ambassador" => "pages#ambassador"
+  # get "ambassador" => "pages#ambassador"
   # get "breakroom" => "pages#breakroom"
   get "invite" => "pages#invite"
   get "shop" => "pages#shop"
   get "thankyou" => "pages#thankyou"
-  get "illini" => "pages#illini"
 
   match '/contacts',     to: 'contacts#new',             via: 'get'
   resources "contacts", only: [:new, :create]
