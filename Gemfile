@@ -19,6 +19,7 @@ gem 'gibbon'
 gem 'figaro', '~> 1.1.0'
 gem 'mail_form'
 gem 'simple_form'
+gem 'will_paginate', '~> 3.0.5'
 
 group :development, :test do
 	gem 'sqlite3' # Use sqlite3 as the database for Active Record

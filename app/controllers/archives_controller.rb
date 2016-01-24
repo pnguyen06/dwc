@@ -5,7 +5,7 @@ class ArchivesController < ApplicationController
   # GET /archives
   # GET /archives.json
   def index
-    @archives = Archive.all.order("created_at DESC")
+    @archives = Archive.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /archives/1
