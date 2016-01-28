@@ -1,29 +1,33 @@
 <% ref_url = "http://dailywatercooler.com/?ref=" + @info.fetch("data")[0].fetch("id") %>
-<div class="input-group">
-  <div class="input-group-addon">
-    <span class="fa fa-link"></span> <small>Share Link</small>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="input-group">
+      <div class="input-group-addon">
+        <span class="fa fa-link"></span> <small>Link</small>
+      </div>
+      <input type="text" class="form-control" value=<%= ref_url %> >
+    </div>
+    <div>
+      <table class="table borderless">
+        <tbody>
+          <tr>
+            <td>
+              <a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-envelope"></i> <small>Email</small></a>
+            </td>
+            <td>
+              <% ref_facebook = "https://www.facebook.com/sharer/sharer.php?u=" + ref_url %>
+              <a class="btn btn-default" href=<%= ref_facebook %> target="_blank"><i class="fa fa-facebook"></i> <small>Share</small></a>
+            </td>
+            <td>
+              <% ref_twitter = "https://twitter.com/intent/tweet?text=Do+you+read+%40the_dwc%3F+Get+a+morning+email+jam-packed+with+news+and+humor+to+make+sure+you're+never+left+behind%3A&url=http%3A%2F%2Fdailywatercooler.com%2F%3Fref%3D"+@info.fetch("data")[0].fetch("id") %>
+              <% ref_twttr_pop = "window.open('print.html', 'newwindow', 'width=300, height=250'); return false;" %>
+              <a class="btn btn-default" href=<%= ref_twitter %> target="_blank" ><i class="fa fa-twitter"></i> <small>Tweet</small></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-  <input type="text" class="form-control" value=<%= ref_url %> >
-</div>
-<div>
-  <table class="table borderless">
-    <tbody>
-      <tr>
-        <td>
-          <a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-envelope"></i> <small>Email</small></a>
-        </td>
-        <td>
-          <% ref_facebook = "https://www.facebook.com/sharer/sharer.php?u=" + ref_url %>
-          <a class="btn btn-default" href=<%= ref_facebook %> target="_blank"><i class="fa fa-facebook"></i> <small>Share</small></a>
-        </td>
-        <td>
-          <% ref_twitter = "https://twitter.com/intent/tweet?text=Do+you+read+%40the_dwc%3F+Get+a+morning+email+jam-packed+with+news+and+humor+to+make+sure+you're+never+left+behind%3A&url=http%3A%2F%2Fdailywatercooler.com%2F%3Fref%3D"+@info.fetch("data")[0].fetch("id") %>
-          <% ref_twttr_pop = "window.open('print.html', 'newwindow', 'width=300, height=250'); return false;" %>
-          <a class="btn btn-default" href=<%= ref_twitter %> target="_blank" ><i class="fa fa-twitter"></i> <small>Tweet</small></a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
 </div>
 
 <!-- MODAL -->

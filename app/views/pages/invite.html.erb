@@ -32,26 +32,22 @@
       </form>
     <% else %>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-8 col-md-offset-2">
           <% if referrer.referrals == 0 %>
             Sorry, this email has no referrals.
           <% else %>
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <h1><%= referrer.referrals %></h1>
                 FRIENDS REFERRED
               </div>
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <h1><%= referrer.points %></h1>
                 POINTS
               </div>
-              <div class="col-md-4">
-                
-              </div>
             </div>
           <% end %>
-        </div>
-        <div class="col-md-6">
+          <br/><br/>
           <%= render 'layouts/socialshare' %>
         </div>
       </div>
@@ -62,10 +58,9 @@
   <% if @referrers.empty? %>
     <% if @info.fetch("error_count")[0] == 0 %>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-8 col-md-offset-2">
           Sorry, this email has no referrals.
-        </div>
-        <div class="col-md-6">
+          <br/><br/>
           <%= render 'layouts/socialshare' %>
         </div>
       </div>
