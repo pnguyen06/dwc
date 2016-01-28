@@ -29,6 +29,8 @@ class PagesController < ApplicationController
     
     @info = gb.lists.member_info({:id => list_id, :emails =>  emails})
 
+    @referrersRank = Referrer.all.order("points DESC")
+
   end
 
   def shop

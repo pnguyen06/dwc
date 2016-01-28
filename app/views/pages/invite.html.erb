@@ -37,13 +37,17 @@
             Sorry, this email has no referrals.
           <% else %>
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-4">
                 <h1><%= referrer.referrals %></h1>
                 FRIENDS REFERRED
               </div>
-              <div class="col-md-6">
+              <div class="col-md-4">
                 <h1><%= referrer.points %></h1>
                 POINTS
+              </div>
+              <div class="col-md-4">
+                <h1><%= @referrersRank.index{ |item| item.email == referrer.email } + 1 %></h1>
+                RANK
               </div>
             </div>
           <% end %>
