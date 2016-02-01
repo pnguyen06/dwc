@@ -1,19 +1,22 @@
-<div class="jumbotron breakroom_jumbo">
+<!--<div class="jumbotron breakroom_jumbo">
 	<div class="container">
     <p class="cabin jumbo_copy">HELP GROW THIS THING</p>
     <h4 style="line-height: 2.0;">
       I mean, even Flappy Bird had over 50 million downloads
     </h4>
   </div>
+</div>-->
+<div class="row center">
+  <div class="col-md-6 col-md-offset-3" style="background: #ffccbc; height: 200px;">
+    <h1 class="cabin main_hero_text" style="color: #fff;">
+      Invite a friend.
+    </h1>
+    <hr style="width: 75%; border: 2px solid #fff;">
+  </div>
 </div>
 <div class="container breakroom_lookup center" style="margin-top: 30px;">
   <% @referrers.each do |referrer| %>
     <% if referrer.email == "none" %>
-      <hr style="width: 50%">
-      <h2 class="cabin" style="letter-spacing: 2px;">
-        REFERRAL PROGRAM
-      </h2>
-      <hr style="width: 50%;">
       <h4 style="line-height: 2.0">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
